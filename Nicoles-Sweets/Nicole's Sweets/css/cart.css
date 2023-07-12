@@ -14,10 +14,13 @@
 }
 
 #cart-icon {
-    margin-right: 30px;
-    font-size:2rem;
+    font-size: 35px;
+    margin: 25px;
+    padding-left: 30px;
     cursor: pointer;
+    color: black;
 }
+
 
 .cart {
     position: fixed;

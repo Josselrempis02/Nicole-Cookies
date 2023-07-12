@@ -148,3 +148,16 @@ function updatetotal(){
         document.getElementsByClassName('total-price')[0].innerText = '₱' + total;
     
 }
+
+// Cart button
+
+const countEl = document.getElementById('count-el');
+const countElement = document.getElementById('count-element');
+
+
+let count = 0;
+
+function add() {
+    count++;
+    countElement.textContent = count;
+    }
