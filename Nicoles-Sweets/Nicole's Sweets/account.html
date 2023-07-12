@@ -1,0 +1,272 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+   
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins';
+      
+    }
+  body {
+  background-color: #E8D8EB;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid black;
+ margin-top:20px;
+ background: linear-gradient(to   top, rgba(255, 251, 251, 0.452)50%,rgba(255, 251, 251, 0.452)50%);
+}
+.acc{
+
+width:105.6%;
+border: 2px solid black;
+min-height: 5%;
+margin-left: -20.5px;
+padding-top: 20px;
+margin-top: -19.8px;
+ background-color:#D0ADD5;
+padding-bottom: 5px;
+
+}
+.acc1{
+
+width:105.6%;
+border: 2px solid black;
+min-height: 5%;
+margin-left: -20.5px;
+padding-top: 20px;
+margin-top: -2px;
+background: linear-gradient(to   top, rgba(255, 251, 251, 0.452)50%,rgba(255, 251, 251, 0.452)50%);
+padding-bottom: 5px;
+
+}
+.acc2{
+
+width:105.6%;
+border: 2px solid black;
+min-height: 5%;
+margin-left: -20.5px;
+padding-top: 20px;
+margin-top: -3px;
+ background-color:#D0ADD5;
+padding-bottom: 5px;
+
+}
+
+h1 {
+  margin-top:-20px;
+  text-align: center;
+  font-family: tahoma;
+  font-size: 40px;
+}
+
+ .orders {
+  margin-bottom: 20px;
+ 
+}
+.profile{
+  margin-bottom: 20px;
+  font-family: tahoma;
+ margin-left:230px;
+ font-size: 22px;
+
+}
+
+h2 {
+  margin-top:-20px;
+  text-align: center;
+  font-family: tahoma;
+  font-size: 34px;
+}
+td img {
+  width: 100px;
+  height: 100px;
+ margin-left: 1px;
+}
+
+
+table {
+  width: 105.5%;
+  border-collapse: collapse;
+  margin-top: -3px;
+  margin-left: -20px;
+  font-family: tahoma;
+  font-size: 17px;
+ background: linear-gradient(to   top, rgba(255, 251, 251, 0.452)50%,rgba(255, 251, 251, 0.452)50%);
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+
+ 
+}
+input[type="number"] {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'poppins';
+  border: 2px solid black;
+  
+}
+
+
+button[type="submit"] {
+  margin-top:20px;
+  width: 100px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  color: rgb(245, 245, 245);
+  font-family:tahoma;
+  font-weight: 600;
+  transition: 0.1s ease;
+  cursor: pointer;
+  position: absolute;
+  left:100px;
+  position: relative;
+  font-size: 15px;
+  bottom: -15px;
+}
+button[type="submit"] a {
+
+
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+button[type="submit"] a :hover {
+ 
+color: rgb(0, 0, 0);
+ 
+}
+
+
+button[type="out"] {
+  margin-top:20px;
+  width: 100px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  color: rgb(245, 245, 245);
+  font-family:tahoma;
+  font-weight: 600;
+  transition: 0.1s ease;
+  cursor: pointer;
+  position: absolute;
+  left:310px;
+  position: relative;
+  font-size: 15px;
+  bottom: -15px;
+}
+button[type="out"] a {
+
+  text-decoration: none;
+  color: #f4f7fa;
+}
+
+
+.btn{
+  background-color: #000000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  border-radius:20px;
+  text-align: center;
+  height:40px;
+  padding: 0.3rem 0.8rem;
+
+}
+.btn:hover {
+  background-color: #f4f7fa;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+}
+
+
+</style>
+<body>
+  <div class="container">
+    <div class="acc">
+    <h1>My Account</h1>
+    </div>
+    <div class="acc1">
+    <div class="profile">
+      <p>Name: Nicky Joy Matias</p>
+      <p>Email: nickjoy@gmail.com </p>
+      <p>Phone: 09283757694</p>
+      <p>Address: Kung saan lang po</p>
+      <button type="submit" onclick="btn()" id="button">
+        <a href="profile.html">Edit Profile</a>
+    </button>
+    </div>
+    </div>
+    <div class="orders">
+      <div class="acc2">
+      <h2>Order History</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="1.jpg" alt="Your Image Description">
+            </td>
+            <td>Biscocho-Broas-Garlic Bread</td>
+            <td>
+              <input type="number" value="1">
+            </td>
+            <td>₱100.00</td>
+            <td>₱100.00</td>
+            <td> <button class="btn">Delete</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <button type="out" onclick="btn()" id="button">
+      <a href="Login.html">Log out</a>
+  </button>
+  </div>
+  <script src="script.js"></script>
+  <script>
+
+document.getElementById('edit-profile-btn').addEventListener('click', function() {
+  // Redirect to the edit profile page
+  window.location.href = 'edit_profile.html';
+});
+
+document.getElementById('logout-btn').addEventListener('click', function() {
+  // Perform logout actions here
+  alert('You have been logged out.');
+});
+
+  </script>
+</body>
+</html>

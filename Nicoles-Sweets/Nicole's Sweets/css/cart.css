@@ -1,0 +1,129 @@
+:root {
+    --main-color: black;
+    --text-color: white;
+    
+}
+
+
+.cart-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+                                                           
+}
+
+#cart-icon {
+    margin-right: 30px;
+    font-size:2rem;
+    cursor: pointer;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0 4px hs1(0 4% 15% / 10%);
+    transition: 0.3s;
+}
+.cart.active {
+    right: 0;
+}
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cart-shop {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cart-quantity {
+    border: 1px solid black;
+    outline-color:var(--main);
+    width: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cart-remove {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background-color: #fff;
+    color: black;
+    border: 2px solid black;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+}

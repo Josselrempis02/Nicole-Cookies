@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.icon-bar {
+  background-color:#96759C; 
+  position: fixed;
+  width:100%;
+  font-family: 'Poppins';
+  padding: 10 px 10;
+  margin-top: -5px;
+  z-index: 12;
+  border: 1px solid black;
+}
+
+.icon-bar a {
+  float: right; 
+  text-align: center; 
+  width: 6.5%;
+  height: 70px;
+  padding: 11px ;
+  transition: all 0.3s ease; 
+  color: rgb(0, 0, 0);
+  font-size:35px;
+  border-radius:100px;
+  margin-right: 15px ;
+  margin-top: 10px ;
+  margin-bottom:13px ;
+  cursor: pointer;
+}
+
+.logo img{
+  width: 130px;
+  height: 90%;
+  margin-left: 10px;
+  margin-top: -15px ;
+  margin-bottom:-20px ;
+  position: relative;
+}
+
+
+ .icon-bar a:hover {
+  background-color: #f2f4f7a2;
+}
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body {
+  background:#EBE2ED;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+
+span{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+.height{
+        height: 60vh;
+       }
+       
+.search{
+       position: absolute;
+       margin-right: 1px;
+       margin-top: -100px;
+
+
+
+       }
+
+       .search input{
+       	font-size:  15px;
+        height: 40px;
+     
+        border: 2px solid rgb(0, 0, 0);
+        position: relative;
+       	margin-left: 2px;
+       	width: 250px;
+       	border-radius: 10px;
+        margin-top:30px;
+       }
+
+
+       .search input:focus{
+        box-shadow: black;
+
+       }
+
+ a{
+text-decoration: none;
+  border: none;
+  font-size: 27px;
+  color: rgb(0, 0, 0);
+  margin-top:-14px;
+  position: absolute;
+  margin-left: -50px;
+  font-family: 'Poppins';
+  font-weight:600;
+}
+a:hover{
+color: #2f0eec;
+
+}
+        .sec{
+          margin-top: 75px;
+  border: 2px solid rgb(0, 0, 0);
+  padding:1rem;
+ height: 50px;
+ width: 110%;
+ background-color: rgba(243, 241, 241, 0.274);
+ margin-left: -17px;
+ text-align: center;
+  }
+  
+  .sec a{
+    font-size: 27px;
+  color: rgb(0, 0, 0);
+  margin-top:-14px;
+  position: absolute;
+  margin-left: -75px;
+  font-family: 'Poppins';
+  font-weight:600;
+  }
+ .sec a:hover{
+color: #2f0eec;
+
+}    
+
+button[type="submit"] {
+  margin-top:-39px;
+  width: 80px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  color: rgb(245, 245, 245);
+  font-family: Poppins;
+  font-weight: 500;
+  transition: 0.1s ease;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 260px;
+  
+}
+
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+
+background-color:  rgb(245, 245, 245);
+color: rgb(0, 0, 0);
+  transition: 0.1s ease;
+  border: 2px solid black;
+
+}
+
+
+
+select {
+  display: block;
+  box-sizing: border-box;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border:2px solid black;
+color: black;
+  font-family: 'tahoma';
+  font-weight:540  ;
+  font-size: 17px;
+  transition: 0.2s ease;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+select:focus{
+  border-bottom: 1px solid #000000;
+  color: #020202;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.sort{
+	position: absolute;
+	margin-left:-50px;
+	top: 130px;
+    font-family: 'tahoma';
+            color: black;
+            font-size: 18px;
+    
+}
+.prange{
+	position: absolute;
+	margin-left:-100px;
+	top: 230px;
+
+    font-family: 'tahoma';
+            color: black;
+            font-size: 18px;
+}
+h1 {
+			margin: 0;
+           
+		}
+        .box{
+            display: flex;
+  align-items: center;
+	margin-top:80px;
+			justify-content: center;
+		width: 25%;
+        height: 100%;
+        border: 2px solid black;
+        padding-bottom: 600px;
+        flex-wrap: wrap;
+        padding-top: 500px;
+        position: fixed;
+        background-color:#D0ADD5; 
+
+
+        }
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			
+            margin-left:400px;
+            margin-top: 5px;
+	}
+		.product {
+			background-color: #f2f2f2;
+			border: 1px solid black;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+			margin: 10px;
+			padding: 5px;
+			width: 350px;
+            margin-top:110px;
+            margin-bottom:-70px;
+            margin-left: 2px ;
+      
+           
+		}
+		.product img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			height: auto;
+            margin-bottom: 15px;
+		}
+		.product h2 {
+			padding-top: 10;
+            text-align: center;
+            font-size: 18px;
+            color: #000000;
+            font-family: 'tahoma';
+            font-weight: 600;
+        
+		}
+		.product p {
+			margin: 10px 0;
+            text-align: center;
+            font-size: 19px;
+            color: #000000;
+            font-family: 'tahoma';
+            font-weight: 530;
+
+		}
+		.product button {
+			background-color: rgb(0, 0, 0);
+			border: none;
+			color: white;
+			cursor: pointer;
+			padding: 10px;
+            margin-left: 120px;
+            border-radius: 10px;
+            font-family: 'Poppins';
+            font-weight: 600;
+           margin-bottom:10px;
+		}
+		.product button:hover {
+			background-color: rgb(248, 245, 245);
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+		}
+        
+
+
+</style>
+</head>
+<body>
+
+<div class="icon-bar">
+   
+ 
+   <div class="logo">
+   <img src="img/back.png">
+    <div class="name">
+
+  </div>
+ </div>
+</div>
+
+
+<div class="box">
+    <div class="sort">
+        <div class="search">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search a Product" oninput="search()">
+            <button type="submit" onclick="search()" id="searchButton">Search</button>
+        </div>
+        <label>Sort By:</label>
+        <select id="sortBy" onchange="sort()">
+            <option value="Choice">--Product--</option>
+            <option value="gummy">Gummies</option>
+            <option value="bis">Biscuits</option>
+            <option value="coo">Cookies</option>
+             <option value="choco">Chocolate</option>
+        </select>
+        <label>Prices:</label>
+        <select id="priceRange" onchange="filterByPrice()">
+            <option value="price">--Price--</option>
+            <option value="Lowest">0-50</option>
+            <option value="Middle">50-100</option>
+            <option value="Highest">100-300</option>
+        </select>
+    </div>
+    <div class="sec">
+       <a href="login.html">My account</a>
+   </div>
+</div>
+                   
+   
+
+
+<header>
+    <h1></h1>
+</header>
+<div class="container" id="productContainer">
+    <div class="product" data-category="choco">
+        <img src="prod/2.jpg" alt="Product 2">
+        <h2>Fibisco-Chocolate Mallows</h2>
+        <p>₱80.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/3.jpg" alt="Product 3">
+        <h2>Kiamoi</h2>
+        <p>₱60.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="coo">
+        <img src="prod/4.jpg" alt="Product 4">
+        <h2>Fibisco-Chocolate Chip Cookies</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="bis">
+        <img src="prod/5.jpg" alt="Product 5">
+        <h2>Supe Delights-Brownie Bites</h2>
+        <p>₱60.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="choco">
+        <img src="prod/6.jpg" alt="Product 6">
+        <h2>Cone Bites-Chocolate</h2>
+        <p>₱130.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="bis">
+        <img src="prod/8.jpg" alt="Product 8">
+        <h2>Super Delights- Butterscotch Bites</h2>
+        <p>₱60.00</p>
+        <button>Add to Cart</button>
+    </div>
+<div class="product" data-category="bis">
+        <img src="prod/9.jpg" alt="Product 9">
+        <h2>Hiro</h2>
+        <p>₱95.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="bis">
+        <img src="prod/10.jpg" alt="Product 10">
+        <h2>Fibisco- Flakes</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="bis">
+        <img src="prod/11.jpg" alt="Product 11">
+        <h2>Wafer- Chocolate</h2>
+        <p>₱60.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="coo">
+        <img src="prod/12.jpg" alt="Product 12">
+        <h2>Super Delights- Mini Chocolate Chip Cookies</h2>
+        <p>₱60.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="bis">
+        <img src="prod/13.jpg" alt="Product 13">
+        <h2>Fibisco- Jolly</h2>
+        <p>₱95.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/14.jpg" alt="Product 14">
+        <h2>Fibisco- Assorted Biscuits</h2>
+        <p>₱90.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="choco">
+        <img src="prod/15.jpg" alt="Product 15">
+        <h2>Choco Stick</h2>
+        <p>₱110.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="bis">
+        <img src="prod/16.jpg" alt="Product 16">
+        <h2>Milky Wafer- Long </h2>
+        <p>₱105.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="coo">
+        <img src="prod/17.jpg" alt="Product 17">
+        <h2>Butter Cookies</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/18.jpg" alt="Product 18">
+        <h2>Gummy Mix- Variety 2</h2>
+        <p>₱45.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="choco">
+        <img src="prod/19.jpg" alt="Product 19">
+        <h2>Ricoa- Chocolate Nips</h2>
+        <p>₱50.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category=gummy>
+        <img src="prod/20.jpg" alt="Product 20">
+        <h2>Gummy Bears</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/21.jpg" alt="Product 21">
+        <h2>Orange Gummies</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/22.jpg" alt="Product 22">
+        <h2>Mango Gummies</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/23.jpg" alt="Product 23">
+        <h2>Gummy Mix- 2 Varieties</h2>
+        <p>₱45.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/24.jpg" alt="Product 24">
+        <h2>Sweet and Sour Gummies</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/25.jpg" alt="Product 25">
+        <h2>Letter Gummies</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product" data-category="gummy">
+        <img src="prod/26.jpg" alt="Product 26">
+        <h2>Gummy Mix- Variety 1</h2>
+        <p>₱45.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="gummy">
+        <img src="prod/27.jpg" alt="Product 27">
+        <h2>Burger Gummies</h2>
+        <p>₱45.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="gummy">
+        <img src="prod/28.jpg" alt="Product 28">
+        <h2>Watermelon Gummies</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="gummy">
+        <img src="prod/29.jpg" alt="Product 29">
+        <h2>Heart- Shape Gummies</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="gummy">
+        <img src="prod/30.jpg" alt="Product 30">
+        <h2>Gummy Translucent Worms</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="gummy">
+        <img src="prod/31.jpg" alt="Product 31">
+        <h2>Gummy Worms</h2>
+        <p>₱30.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="choco">
+        <img src="prod/32.jpg" alt="Product 32">
+        <h2>Cone Bites- Choco Strawberry</h2>
+        <p>₱130.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="bis">
+        <img src="prod/35.jpg" alt="Product 35">
+        <h2>Toasted Bread</h2>
+        <p>₱70.00</p>
+        <button>Add to Cart</button>
+    </div>
+     <div class="product" data-category="bis">
+        <img src="prod/36.jpg" alt="Product 36">
+        <h2>Ice Gem- Classic</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/37.jpg" alt="Product 37">
+        <h2>Ice Gem- Chocolate</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/39.jpg" alt="Product 39">
+        <h2>Egg Cracklets- Big</h2>
+        <p>₱70.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/40.jpg" alt="Product 40">
+        <h2>Fibisco- Peanut Crunch</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/41.jpg" alt="Product 41">
+        <h2>Special Biscocho</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/42.jpg" alt="Product 42">
+        <h2>Special Garlic Bread</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/43.jpg" alt="Product 43">
+        <h2>Pacencia- Eggnog</h2>
+        <p>₱90.00</p>
+        <button>Add to Cart</button>
+    </div>
+      <div class="product" data-category="bis">
+        <img src="prod/44.jpg" alt="Product 44">
+        <h2>Special Broas</h2>
+        <p>₱100.00</p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+
+<script>
+    function search() {
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const productElements = Array.from(document.querySelectorAll(".product"));
+
+        productElements.forEach((productElement) => {
+            const productName = productElement.querySelector("h2").textContent.toLowerCase();
+            if (productName.includes(searchInput)) {
+                productElement.style.display = "block";
+            } else {
+                productElement.style.display = "none";
+            }
+        });
+    }
+
+    function sort() {
+        const sortBy = document.getElementById("sortBy").value;
+        const productElements = Array.from(document.querySelectorAll(".product"));
+
+        productElements.forEach((productElement) => {
+            const productCategory = productElement.getAttribute("data-category");
+            if (sortBy === "Choice" || productCategory === sortBy) {
+                productElement.style.display = "block";
+            } else {
+                productElement.style.display = "none";
+            }
+        });
+    }
+
+    function filterByPrice() {
+        const priceRange = document.getElementById("priceRange").value;
+        const productElements = Array.from(document.querySelectorAll(".product"));
+
+        productElements.forEach((productElement) => {
+            const productPrice = parseFloat(productElement.querySelector("p").textContent.replace("₱", ""));
+            if (priceRange === "price" || checkPriceRange(priceRange, productPrice)) {
+                productElement.style.display = "block";
+            } else {
+                productElement.style.display = "none";
+            }
+        });
+    }
+
+    function checkPriceRange(priceRange, productPrice) {
+        if (priceRange === "Lowest" && productPrice >= 0 && productPrice <= 50) {
+            return true;
+        } else if (priceRange === "Middle" && productPrice >= 50 && productPrice <= 100) {
+            return true;
+        } else if (priceRange === "Highest" && productPrice >= 100 && productPrice <= 300) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // Function to shuffle array using Fisher-Yates algorithm
+    function shuffle(array) {
+        let currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle
+        while (currentIndex !== 0) {
+            // Pick a remaining element
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // Swap it with the current element
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    // Shuffle product positions on page refresh
+    window.addEventListener("load", function() {
+        const productContainer = document.getElementById("productContainer");
+        const productElements = Array.from(productContainer.querySelectorAll(".product"));
+        shuffle(productElements);
+
+        // Append shuffled product elements back to the container
+        productElements.forEach((productElement) => {
+            productContainer.appendChild(productElement);
+        });
+    });
+  
+
+    // Rest of the code for search, sort, and price range functionality
+    // ...
+</script>
+
+</body>
+</html>

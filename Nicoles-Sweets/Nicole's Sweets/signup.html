@@ -1,0 +1,303 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+   
+  *{
+      margin: 0;
+      padding: 0;
+    
+      box-sizing: border-box;
+      font-family: 'Poppins';
+      
+    }
+
+
+ .icon-bar {
+  background-color:#96759C; 
+  position: fixed;
+  width:100%;
+  font-family: 'Poppins';
+  
+  padding: 10 px 10;
+  z-index: 12;
+}
+
+.icon-bar a {
+  float: right; 
+  text-align: center; 
+  width: 6.5%;
+  height: 70px;
+  padding: 11px ;
+  transition: all 0.3s ease; 
+  color: rgb(0, 0, 0);
+  font-size:35px;
+  border-radius:100px;
+  margin-right: 15px ;
+  margin-top: 10px ;
+  margin-bottom:13px ;
+  cursor: pointer;
+}
+
+.logo img{
+  width: 130px;
+  height: 90%;
+  margin-left: 10px;
+  margin-top: -15px ;
+  margin-bottom:-20px ;
+  position: relative;
+}
+
+ .icon-bar a:hover {
+  
+  background-color: #f2f4f7a2;
+  
+  border-radius:100px;
+ 
+}
+body {
+  background-image: url("img/back.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: cover;
+  }
+}
+.signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form {
+    margin-top:80px;
+    background: linear-gradient(to   top, rgba(255, 251, 251, 0.452)50%,rgba(255, 251, 251, 0.452)50%);
+    width:450px;
+  border-radius: 40px;
+  padding: 10px 30px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 123px;
+}
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 45px;
+  border: 3px solid #000000;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+
+
+
+::placeholder {
+  color: transparent;
+}
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: transparent;
+  color: #000000;
+  font-size: 20px;
+  transition: 0.5s;
+  z-index: 0;
+}
+.submitBtn {
+  display: block;
+  
+  padding: 10px 10px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 15px;
+border:3px solid white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left:120px;
+  margin-left:150px;
+  
+
+}
+
+.submitBtn:hover {
+  background-color: #f0ecf3;
+  border:3px solid rgb(3, 1, 1);
+  color:black;
+  transform: translateY(-2px);
+}
+.input:focus + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.input:focus {
+  border: 3px solid rgb(0, 0, 0);
+}
+.input:not(:placeholder-shown)+ .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 600;
+}
+.para-2 {
+text-align: center;
+color: rgb(0, 0, 0);
+font-size: 15px;
+margin-top:5px;
+font-weight: 500;
+margin-bottom:5px;
+}
+.para-2 a {
+color: #5518e4;
+}
+</style>
+<body>
+
+   
+
+    <div class="icon-bar">
+      
+       
+       
+       <a href="Login.html"><i class="fa fa-user"></i> </a>
+      
+       <a class="active" href="homepage.html"><i class="fa fa-home"></i></a>
+       <div class="logo">
+       <img src="img/back.png">
+        <div class="name">
+       
+      </div>
+     </div>
+    </div>
+    <div class="signupFrm">
+        <form action="" class="form">
+          <h1 class="title">Sign up</h1>
+    
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" id="username">
+            <label for="" class="label">Name</label>
+          </div>
+    
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" id="email">
+            <label for="" class="label">Email</label>
+          </div>
+          <div class="inputContainer">
+            <input type="number" class="input" placeholder="a" id="phone">
+            <label for="" class="label">Phone Number</label>
+          </div>
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" id="address">
+            <label for="" class="label">Address</label>
+          </div>
+          
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" id="password">
+            <label for="" class="label">Password</label>
+          </div>
+         
+          <input type="button" id="signUp" class="submitBtn" value="Sign up">
+          <p class="para-2">
+            Already have an account?<a href="Login.html"> Log in</a>
+          </p>
+        </form>
+      </div>
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } 
+        from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBGmeBEJb7oS9k6Q3dblPtAfqovFGsIxjc",
+          authDomain: "form-ad4c0.firebaseapp.com",
+          databaseURL: "https://form-ad4c0-default-rtdb.firebaseio.com",
+          projectId: "form-ad4c0",
+          storageBucket: "form-ad4c0.appspot.com",
+          messagingSenderId: "258506027597",
+          appId: "1:258506027597:web:28385372af0c213eb12204"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        signUp.addEventListener('click',(e) => {
+          var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var username = document.getElementById('phone').value;
+        var username = document.getElementById('address').value;
+        var password = document.getElementById('password').value;
+      
+
+
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+     // Signed in 
+      const user = userCredential.user;
+
+      set(ref(database, 'Users/' + user.uid),{
+          username: username,
+          email: email,
+          phone:phone,
+          address:address,
+          password: password,
+      })
+
+      alert('user created!');
+      self.location="Login.html";
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+      alert(errorMessage);
+    // ..
+    });
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cart.css">
+
+
+ 
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.icon-bar {
+  background-color:#96759C; 
+  position: fixed;
+  width:100%;
+  font-family: 'Poppins';
+  padding: 10 px 10;
+  margin-top: -5px;
+  z-index: 12;
+   border: 1px solid black;
+}
+
+.icon-bar a {
+  float: right; 
+  text-align: center; 
+  width: 6.5%;
+  height: 70px;
+  padding: 11px ;
+  transition: all 0.3s ease; 
+  color: rgb(0, 0, 0);
+  font-size:35px;
+  border-radius:100px;
+  margin-right: 15px ;
+  margin-top: 10px ;
+  margin-bottom:13px ;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+.logo img{
+  width: 130px;
+  height: 90%;
+  margin-left: 10px;
+  margin-top: -15px ;
+  margin-bottom:-20px ;
+  position: relative;
+}
+
+
+ .icon-bar a:hover {
+  background-color: #f2f4f7a2;
+}
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body {
+  background: #EBE2ED ;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+
+span{
+    /* position: absolute; */
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.height{
+        height: 60vh;
+       }
+       
+.search{
+       position: absolute;
+       margin-right: 1px;
+       margin-top: -100px;
+
+
+
+       }
+
+       .search input{
+        font-size:  15px;
+        height: 40px;
+     
+        border: 2px solid rgb(0, 0, 0);
+        position: relative;
+        margin-left: 2px;
+        width: 250px;
+        border-radius: 10px;
+        margin-top:30px;
+       }
+
+
+       .search input:focus{
+        box-shadow: black;
+
+       }
+
+ a{
+text-decoration: none;
+  border: none;
+  font-size: 27px;
+  color: rgb(0, 0, 0);
+  margin-top:-14px;
+  /* position: absolute; */
+  /* margin-left: -50px; */
+  font-family: 'Poppins';
+  font-weight:600;
+}
+a:hover{
+color: #2f0eec;
+
+}
+        .sec{
+          margin-top: 75px;
+  border: 2px solid rgb(0, 0, 0);
+  padding:1rem;
+ height: 50px;
+ width: 110%;
+ background-color: rgba(243, 241, 241, 0.274);
+ margin-left: -19px;
+ text-align: center;
+  }
+  
+  .sec a{
+    font-size: 27px;
+  color: rgb(0, 0, 0);
+  margin-top:-14px;
+  position: absolute;
+  margin-left: -75px;
+  font-family: 'Poppins';
+  font-weight:600;
+  }
+ .sec a:hover{
+color: #2f0eec;
+
+}    
+
+button[type="submit"] {
+  margin-top:-39px;
+  width: 80px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  color: rgb(245, 245, 245);
+  font-family: Poppins;
+  font-weight: 500;
+  transition: 0.1s ease;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 260px;
+  
+}
+
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+
+background-color:  rgb(245, 245, 245);
+color: rgb(0, 0, 0);
+  transition: 0.1s ease;
+  border: 2px solid black;
+
+}
+
+
+
+select {
+  display: block;
+  box-sizing: border-box;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border:2px solid black;
+color: black;
+  font-family: 'tahoma';
+  font-weight:540  ;
+  font-size: 17px;
+  transition: 0.2s ease;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+select:focus{
+  border-bottom: 1px solid #000000;
+  color: #020202;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.sort{
+    position: absolute;
+    margin-left:-50px;
+    top: 130px;
+    font-family: 'tahoma';
+            color: black;
+            font-size: 18px;
+    
+}
+.prange{
+    position: absolute;
+    margin-left:-100px;
+    top: 230px;
+
+    font-family: 'tahoma';
+            color: black;
+            font-size: 18px;
+}
+h1 {
+            margin: 0;
+           
+        }
+        .box{
+            display: flex;
+  align-items: center;
+    margin-top:80px;
+            justify-content: center;
+        width: 25%;
+        height: 100%;
+        border: 2px solid black;
+        padding-bottom: 600px;
+        flex-wrap: wrap;
+        padding-top: 500px;
+        position: fixed;
+        background-color:#D0ADD5; 
+
+
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin-right: -200px;
+            margin-top: 5px;
+    }
+        .product {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            padding: 5px;
+            width: 350px;
+            margin-top:110px;
+            margin-bottom:-70px;
+            margin-left: 2px ;
+  
+        }
+        .product img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product:hover img {
+            transform: scale(1);
+            outline: .2rem solid #222;
+            outline-offset: 0;
+        }
+        .product h2 {
+            padding-top: 10;
+            text-align: center;
+            font-size: 18px;
+            color: #000000;
+            font-family: 'tahoma';
+            font-weight: 600;
+        
+        }
+        .product p {
+            margin: 10px 0;
+            text-align: center;
+            font-size: 19px;
+            color: #000000;
+            font-family: 'tahoma';
+            font-weight: 530;
+
+        }
+        .product button {
+            background-color: rgb(0, 0, 0);
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: 120px;
+            border-radius: 10px;
+            font-family: 'Poppins';
+            font-weight: 600;
+           margin-bottom:10px;
+        }
+        .product button:hover {
+            background-color: rgb(248, 245, 245);
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+        }
+        
+.sec2{
+          margin-top: -66px;
+  border: 2px solid rgb(0, 0, 0);
+  padding:1rem;
+ height: 50px;
+ width: 110.1%;
+ background-color: rgba(243, 241, 241, 0.274);
+ margin-left: -19px;
+ text-align: center;
+  }
+  .sec2 a{
+    font-size: 27px;
+  color: rgb(0, 0, 0);
+  margin-top:-14px;
+  position: absolute;
+  margin-left: -75px;
+  font-family: 'Poppins';
+  font-weight:600;
+  }
+ .sec2 a:hover{
+color: #2f0eec;
+
+}    
+
+.user {
+    margin-left: 3000px;
+}
+
+/* PRODUCT DETAILS OVERLAY */
+
+.image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay h2,
+.overlay p {
+  margin: 0;
+  color: #f2f2f2;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+ .img1{
+  width: 130px;
+  height: 90%;
+  margin-left: 10px;
+  margin-top: -15px ;
+  margin-bottom:-20px ;
+  position: relative;
+ }
+
+</style>
+</head>
+<body>
+    <div class="icon-bar"> 
+        <div class="cart-box ">
+          <img class="img1" src="img/back.png" width="300" height="200">
+          <!-- cart-icon -->
+        <i class="bx bxs-cart-alt" id="cart-icon"> </i>
+        <div class="cart">
+            <h2 class="cart-title">Shopping Cart</h2>
+            <!-- content -->
+            <div class="cart-content">
+
+              
+                  <!-- <img src="prod/2.jpg" alt="" class="cart-img">
+                  <div class="detail-box">
+                    <div class="cart-product-title">Fibisco-Chocolate Mallows</div>
+                    <div class="cart-price">₱80</div>
+                    <input type="number" value="1" class="cart-quantity">
+                  </div> -->
+                  <!-- Remove -->
+                  <!-- <i class="bx bxs-trash-alt cart-remove"></i> -->
+                
+
+            </div>
+            <div class="total">
+              <div class="total-title">Total</div>
+              <div class="total-price">₱0</div>
+            </div>
+            <!-- Buy button -->
+            <button type="button" class="btn-buy">Buy Now</button>
+            <!-- Cartclose -->
+            <i class="bx bx-x" id="close-cart"></i>
+        </div>
+    </div>
+
+ </div>
+
+
+<div class="box">
+    <div class="sort">
+        <div class="search">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search a Product" oninput="search()">
+            <button type="submit" onclick="search()" id="searchButton">Search</button>
+        </div>
+        <label>Sort By:</label>
+        <select id="sortBy" onchange="sort()">
+            <option value="Choice">--Product--</option>
+            <option value="gummy">Gummies</option>
+            <option value="bis">Biscuits</option>
+            <option value="coo">Cookies</option>
+             <option value="choco">Chocolate</option>
+        </select>
+        <label>Prices:</label>
+        <select id="priceRange" onchange="filterByPrice()">
+            <option value="price">--Price--</option>
+            <option value="Lowest">0-50</option>
+            <option value="Middle">50-100</option>
+            <option value="Highest">100-300</option>
+        </select>
+    </div>
+    
+        <div class="sec">
+       <a href="Login.html">Log out</a>
+       <div class="sec2">
+        <a href="account.html">My account</a>
+      </div>                
+   </div>   
+
+
+</div>
+
+<header>
+    <h1></h1>
+</header>
+<div class="container" id="productContainer">
+    
+    <div class="product" data-id="1" class="card-item" data-category="choco" data-name="p-1">
+      <div class="image">
+        <img src="prod/2.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Fibisco-Chocolate Mallows</h2>
+        <p  class="price">₱80.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="2" class="card-item" data-category="gummy" data-name="p-2">
+         <div class="image">
+        <img src="prod/3.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Kiamoi</h2>
+        <p class="price">₱60.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="3" class="card-item" data-category="coo" data-name="p-3">
+         <div class="image">
+        <img src="prod/4.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Fibisco-Chocolate Chip Cookies</h2>
+        <p class="price">₱100.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="4" class="card-item" data-category="bis" data-name="p-4">
+         <div class="image">
+        <img src="prod/5.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Supe Delights-Brownie Bites</h2>
+        <p class="price">₱60.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="5" class="card-item" data-category="choco" data-name="p-5">
+         <div class="image">
+        <img src="prod/6.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Cone Bites-Chocolate</h2>
+        <p class="price">₱130.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="6" class="card-item" data-category="bis" data-name="p-6">
+         <div class="image">
+        <img src="prod/8.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Super Delights- Butterscotch Bites</h2>
+        <p class="price">₱60.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="7" class="card-item" data-category="bis" data-name="p-7">
+         <div class="image">
+        <img src="prod/9.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Hiro</h2>
+        <p class="price">₱95.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="8" class="card-item" data-category="bis" data-name="p-8">
+        <div class="image">
+        <img src="prod/10.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Fibisco- Flakes</h2>
+        <p class="price">₱100.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="9" class="card-item" data-category="bis" data-name="p-9">
+        <div class="image">
+        <img src="prod/11.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Wafer- Chocolate</h2>
+        <p class="price">₱60.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="10" class="card-item" data-category="coo" data-name="p-10">
+        <div class="image">
+        <img src="prod/12.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Super Delights- Mini Chocolate Chip Cookies</h2>
+        <p class="price">₱60.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="11" class="card-item" data-category="bis" data-name="p-11">
+        <div class="image">
+        <img src="prod/13.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Fibisco- Jolly</h2>
+        <p class="price">₱95.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="12" class="card-item" data-category="bis" data-name="p-12">
+        <div class="image">
+        <img src="prod/14.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Fibisco- Assorted Biscuits</h2>
+        <p class="price">₱90.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="13" class="card-item" data-category="choco" data-name="p-13">
+        <div class="image">
+        <img src="prod/15.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Choco Stick</h2>
+        <p class="price">₱110.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="14" class="card-item" data-category="bis"  data-name="p-14" >
+        <div class="image">
+        <img src="prod/16.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Milky Wafer- Long </h2>
+        <p class="price">₱105.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="15" class="card-item" data-category="coo" data-name="p-15" >
+        <div class="image">
+        <img src="prod/17.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Butter Cookies</h2>
+        <p class="price">₱100.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="16" class="card-item" data-category="gummy" data-name="p-16" >
+        <div class="image">
+        <img src="prod/18.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Gummy Mix- Variety 2</h2>
+        <p class="price">₱45.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="17" class="card-item" data-category="choco" data-name="p-17" >
+        <div class="image">
+        <img src="prod/19.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Ricoa- Chocolate Nips</h2>
+        <p class="price">₱50.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>>
+    </div>
+    <div class="product" data-id="18" class="card-item" data-category=gummy data-name="p-18" >
+        <div class="image">
+        <img src="prod/20.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Gummy Bears</h2>
+        <p class="price">₱30.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="19" class="card-item" data-category="gummy" data-name="p-19" >
+        <div class="image">
+        <img src="prod/21.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Orange Gummies</h2>
+        <p class="price">₱30.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="20" class="card-item" data-category="gummy" data-name="p-20" >
+        <div class="image">
+        <img src="prod/22.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Mango Gummies</h2>
+        <p class="price">₱30.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="21" class="card-item" data-category="gummy" data-name="p-21" >
+        <div class="image">
+        <img src="prod/23.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title"></h2> Mix- 2 Varieties </h2>
+        <p class="price">₱45.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="22" class="card-item" data-category="gummy" data-name="p-22" >
+        <div class="image">
+        <img src="prod/24.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Sweet and Sour Gummies</h2>
+        <p class="price">₱30.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="23" class="card-item" data-category="gummy" data-name="p-23" >
+        <div class="image">
+        <img src="prod/25.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Letter Gummies</h2>
+        <p class="price">₱30.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product" data-id="24" class="card-item" data-category="gummy" data-name="p-24" >
+        <div class="image">
+        <img src="prod/26.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>>
+        <h2 class="product-title">Gummy Mix- Variety 1</h2>
+        <p class="price">₱45.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="25" class="card-item" data-category="gummy" data-name="p-25" >
+        <div class="image">
+        <img src="prod/27.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Burger Gummies</h2>
+        <p class="price">₱45.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="26" class="card-item" data-category="gummy" data-name="p-26" >
+        <div class="image">
+        <img src="prod/28.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Watermelon Gummies</h2>
+        <p class="price">₱30.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="27" class="card-item" data-category="gummy" data-name="p-27" >
+        <div class="image">
+        <img src="prod/29.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Heart- Shape Gummies</h2>
+        <p class="price">₱30.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="28" class="card-item" data-category="gummy" data-name="p-28" >
+        <div class="image">
+        <img src="prod/30.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Gummy Translucent Worms</h2>
+        <p class="price">₱30.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="29" class="card-item" data-category="gummy" data-name="p-29">
+        <div class="image">
+        <img src="prod/31.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Gummy Worms</h2>
+        <p class="price">₱30.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="30" class="card-item" data-category="choco" data-name="p-30">
+        <div class="image">
+        <img src="prod/32.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Cone Bites- Choco Strawberry</h2>
+        <p class="price">₱130.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="31" class="card-item" data-category="bis" data-name="p-31">
+        <div class="image">
+        <img src="prod/34.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Toasted Bread</h2>
+        <p class="price">₱70.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+     <div class="product" data-id="32" class="card-item" data-category="bis" data-name="p-32">
+        <div class="image">
+        <img src="prod/35.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Ice Gem- Classic</h2>
+        <p class="price">₱100.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="33" class="card-item" data-category="bis" data-name="p-33">
+        <div class="image">
+        <img src="prod/36.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Ice Gem- Chocolate</h2>
+        <p class="price">₱100.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="34" class="card-item" data-category="bis" data-name="p-34">
+        <div class="image">
+        <img src="prod/37.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Egg Cracklets- Big</h2>
+        <p class="price">₱70.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="35" class="card-item" data-category="bis" data-name="p-35">
+        <div class="image">
+        <img src="prod/38.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Fibisco- Peanut Crunch</h2>
+        <p class="price">₱100.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="36" class="card-item" data-category="bis" data-name="p-36" >
+        <div class="image">
+        <img src="prod/39.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Special Biscocho</h2>
+        <p class="price">₱100.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="37" class="card-item" data-category="bis" data-name="p-37">
+        <div class="image">
+        <img src="prod/40.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Special Garlic Bread</h2>
+        <p class="price">₱100.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="38" class="card-item" data-category="bis" data-name="p-38">
+        <div class="image">
+        <img src="prod/41.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Pacencia- Eggnog</h2>
+        <p class="price">₱90.00 </span></p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+      <div class="product" data-id="39" class="card-item" data-category="bis" data-name="p-39">
+        <div class="image">
+        <img src="prod/42.jpg" alt="Product 2" class="product-img">
+        <div class="overlay">
+          <h2>Fibisco-Chocolate Mallows</h2>
+          <h2>(100g)</h2>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Consequatur, Dolorem. </p>
+        </div>
+      </div>
+        <h2 class="product-title">Special Broas</h2>
+        <p class="price">₱100.00 </span></p>
+       <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<script>
+    function search() {
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const productElements = Array.from(document.querySelectorAll(".product"));
+
+        productElements.forEach((productElement) => {
+            const productName = productElement.querySelector("h2").textContent.toLowerCase();
+            if (productName.includes(searchInput)) {
+                productElement.style.display = "block";
+            } else {
+                productElement.style.display = "none";
+            }
+        });
+    }
+
+    function sort() {
+        const sortBy = document.getElementById("sortBy").value;
+        const productElements = Array.from(document.querySelectorAll(".product"));
+
+        productElements.forEach((productElement) => {
+            const productCategory = productElement.getAttribute("data-category");
+            if (sortBy === "Choice" || productCategory === sortBy) {
+                productElement.style.display = "block";
+            } else {
+                productElement.style.display = "none";
+            }
+        });
+    }
+
+    function filterByPrice() {
+        const priceRange = document.getElementById("priceRange").value;
+        const productElements = Array.from(document.querySelectorAll(".product"));
+
+        productElements.forEach((productElement) => {
+            const productPrice = parseFloat(productElement.querySelector("p").textContent.replace("₱", ""));
+            if (priceRange === "price" || checkPriceRange(priceRange, productPrice)) {
+                productElement.style.display = "block";
+            } else {
+                productElement.style.display = "none";
+            }
+        });
+    }
+
+    function checkPriceRange(priceRange, productPrice) {
+        if (priceRange === "Lowest" && productPrice >= 0 && productPrice <= 50) {
+            return true;
+        } else if (priceRange === "Middle" && productPrice >= 50 && productPrice <= 100) {
+            return true;
+        } else if (priceRange === "Highest" && productPrice >= 100 && productPrice <= 300) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+     // Function to shuffle array using Fisher-Yates algorithm
+    function shuffle(array) {
+        let currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle
+        while (currentIndex !== 0) {
+            // Pick a remaining element
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // Swap it with the current element
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    // Shuffle product positions on page refresh
+    window.addEventListener("load", function() {
+        const productContainer = document.getElementById("productContainer");
+        const productElements = Array.from(productContainer.querySelectorAll(".product"));
+        shuffle(productElements);
+
+        // Append shuffled product elements back to the container
+        productElements.forEach((productElement) => {
+            productContainer.appendChild(productElement);
+        });
+    });
+
+    // Rest of the code for search, sort, and price range functionality
+    // ...
+    // Function to add a product to the cart
+ 
+
+</script>
+<script>
+
+
+</script>
+<script src="js/cart.js"></script>
+   
+</body>
+</html>
