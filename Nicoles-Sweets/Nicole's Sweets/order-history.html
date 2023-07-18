@@ -204,20 +204,7 @@ button[type="out"] a {
 </style>
 <body>
   <div class="container">
-    <div class="acc">
-    <h1>My Account</h1>
-    </div>
-    <div class="acc1">
-    <div class="profile">
-      <p>Name: Nicky Joy Matias</p>
-      <p>Email: nickjoy@gmail.com </p>
-      <p>Phone: 09283757694</p>
-      <p>Address: Kung saan lang po</p>
-      <button type="submit" onclick="btn()" id="button">
-        <a href="profile.html">Edit Profile</a>
-    </button>
-    </div>
-    </div>
+  
     <div class="orders">
       <div class="acc2">
       <h2>Order History</h2>
@@ -234,7 +221,7 @@ button[type="out"] a {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td>
               <img src="1.jpg" alt="Your Image Description">
             </td>
@@ -245,7 +232,7 @@ button[type="out"] a {
             <td>₱100.00</td>
             <td>₱100.00</td>
             <td> <button class="btn">Delete</button></td>
-          </tr>
+          </tr> -->
           
         </tbody>
       </table>
@@ -267,6 +254,56 @@ document.getElementById('logout-btn').addEventListener('click', function() {
   alert('You have been logged out.');
 });
 
+
   </script>
+  <script>
+    // Function to parse JSON and add cart items to the order history page
+    function populateOrderHistory() {
+      const orderHistory = document.querySelector('tbody');
+      const cartItemsJSON = localStorage.getItem('cartItems');
+      if (!cartItemsJSON) {
+        orderHistory.innerHTML = '<tr><td colspan="6">No order history yet.</td></tr>';
+        return;
+      }
+  
+      const cartItems = JSON.parse(cartItemsJSON);
+      let orderHistoryHTML = '';
+      cartItems.forEach(item => {
+        orderHistoryHTML += `
+          <tr>
+            <td>
+              <img src="${item.img}" alt="Your Image Description" style="width: 100px; height: 100px;">
+            </td>
+            <td>${item.title}</td>
+            <td>
+              <input type="number" value="${item.quantity}" disabled>
+            </td>
+            <td>${item.price}</td>
+            <td>₱${(parseFloat(item.price.replace('₱', '')) * parseInt(item.quantity)).toFixed(2)}</td>
+            <td>
+              <button class="btn" onclick="deleteOrderItem('${item.title}')">Delete</button>
+            </td>
+          </tr>
+        `;
+      });
+      orderHistory.innerHTML = orderHistoryHTML;
+    }
+  
+    // Function to delete an order item
+    function deleteOrderItem(title) {
+      const cartItemsJSON = localStorage.getItem('cartItems');
+      if (cartItemsJSON) {
+        const cartItems = JSON.parse(cartItemsJSON);
+        const updatedCartItems = cartItems.filter(item => item.title !== title);
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+        populateOrderHistory();
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", populateOrderHistory);
+  </script>
+  
 </body>
 </html>
+
+

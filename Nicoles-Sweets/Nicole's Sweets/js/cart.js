@@ -2,6 +2,11 @@
 let cartIcon = document.querySelector('#cart-icon');
 let cart = document.querySelector('.cart');
 let closeCart = document.querySelector('#close-cart');
+let cartItems = [];
+
+function getCartItemsJSON() {
+  return JSON.stringify(cartItems);
+}
 
 //Open cart
 cartIcon.onclick = () => {
@@ -54,14 +59,31 @@ function ready(){
 
 //buy button wokrs
 
-function buyButtonClicked(){
+function buyButtonClicked() {
     alert("Your Order is placed");
-    var cartContent = document.getElementsByClassName('cart-content')[0]
-    while (cartContent.hasChildNodes()){
+    cartItems = Array.from(document.querySelectorAll('.cart-shop')).map(cartShop => {
+        const title = cartShop.querySelector('.cart-product-title').innerText;
+        const price = cartShop.querySelector('.cart-price').innerText;
+        const quantity = cartShop.querySelector('.cart-quantity').value;
+        const img = cartShop.querySelector('.cart-img').src;
+        return { title, price, quantity, img };
+    });
+
+    // Store the cart items in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    // Clear the cart
+    var cartContent = document.getElementsByClassName('cart-content')[0];
+    while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
     }
     updatetotal();
+
+    // Redirect to the order history page
+    window.location.href = 'order-history.html';
 }
+
+  
 
 
 //Remove Items From Cart
@@ -148,6 +170,8 @@ function updatetotal(){
         document.getElementsByClassName('total-price')[0].innerText = '₱' + total;
     
 }
+
+
 
 // Cart button
 
