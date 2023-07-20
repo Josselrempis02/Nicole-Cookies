@@ -77,12 +77,12 @@ function buyButtonClicked() {
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
     }
+
     updatetotal();
 
-    // Redirect to the order history page
-    window.location.href = 'order-history.html';
+    // Step 4: Reload the page
+    location.reload();
 }
-
   
 
 
